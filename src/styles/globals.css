@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #13133a;
+}
+
+/* styles/Header.css */
+.custom-max-w {
+    max-width: 75rem; /* Ajuste o valor conforme necessário */
+  }
+  
