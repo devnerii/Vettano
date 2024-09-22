@@ -1,5 +1,3 @@
-// src/components/Main/Main.tsx
-
 import React from 'react';
 import Image from 'next/image';
 
@@ -9,14 +7,24 @@ const Main = () => {
       <div className="grid grid-cols-12">
         <div className="col-span-12 flex justify-center mt-10">
           <div className="w-11/12"> {/* Ajuste a largura do contêiner */}
-            <Image
-              src="https://app.blaze.ninja/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fopening-competition-banner.b3be630c.png&w=1200&q=100"
-              alt="Banner de Abertura da Competição"
-              layout="responsive"
-              width={1000}  // Diminuí a largura
-              height={420}  // Diminuí a altura
-              className="rounded-2xl"
-            />
+            <picture>
+              <source
+                media="(min-width: 1024px)"
+                srcSet="/assets/img/images/banner-home-purple-desktop.jpg"
+              />
+              <source
+                media="(min-width: 640px)"
+                srcSet="/assets/img/images/banner-home-purple-tablet.jpg"
+              />
+              <Image
+                src="/assets/img/images/banner-home-purple-mobile.jpg"
+                alt="Banner de Abertura da Competição"
+                layout="responsive"
+                width={1000}  // Mantém a largura
+                height={420}  // Reduz a altura
+                className="rounded-2xl"
+              />
+            </picture>
           </div>
         </div>
       </div>
