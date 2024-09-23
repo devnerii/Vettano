@@ -14,7 +14,6 @@ import {
   FaTwitter,
   FaTiktok,
 } from "react-icons/fa";
-import "../styles/scrollbar.css";
 
 const AVATAR_SIZE = 40;
 const TROPHY_SIZE = 25;

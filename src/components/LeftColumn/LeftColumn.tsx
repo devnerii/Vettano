@@ -7,7 +7,6 @@ import RankSection from "./RankSection";
 import RelevantHeader from "./RelevantHeader";
 import RelevantSection from "./RelevantSection";
 import AdditionalSection from "./AdditionalSection";
-import "../styles/scrollbar.css";  // Certifique-se de importar o CSS
 
 const LeftColumn: React.FC = () => {
   const [loading, setLoading] = useState(true);

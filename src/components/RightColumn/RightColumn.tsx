@@ -13,7 +13,6 @@ import {
 } from "react-icons/fa";
 import { AnimatePresence } from "framer-motion";
 import SlideInAnimation from "../animations/SlideInAnimation";
-import "../styles/scrollbar.css";
 
 interface Friend {
   name: string;

@@ -9,7 +9,6 @@ import MobileMenu from "./MobileMenu";
 import LoadingScreen from "./LoadingScreen";
 import useHeaderState from "./useHeaderState";
 import Navbar from "./Navbar";
-import "./styles/Header.css";
 import ActionButton from "./ActionButton";
 import BalanceButton from "./BalanceButton";
 import FallInAnimation from "../animations/FallInAnimation";

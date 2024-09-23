@@ -17,7 +17,6 @@ import RequestList from './RequestList';
 import ChatWindow from './ChatWindow';
 import MiniProfileModal from './MiniProfileModal';
 import { Friend, Group, Request } from './types';
-import '../styles/scrollbar.css';
 
 const RightColumnNovo: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
