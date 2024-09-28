@@ -117,7 +117,7 @@ const LeftColumnNovo: React.FC = () => {
           </motion.div>
         ) : (
           <ScrollableNav
-            className={`fixed left-0 top-20 h-[calc(100vh-4rem)] bg-gradient-to-bl from-[#191844] via-[#15143d] to-[#0f0e29] text-white ${
+            className={`fixed left-0 top-20 z-10 h-[calc(100vh-4rem)] bg-gradient-to-bl from-[#191844] via-[#15143d] to-[#0f0e29] text-white ${
               isExpanded ? "w-80" : "w-0"
             } transition-all duration-300 ease-in-out shadow-lg flex flex-col rounded-br-lg overflow-y-auto`}
             initial={false}

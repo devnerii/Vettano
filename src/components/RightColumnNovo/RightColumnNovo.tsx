@@ -197,7 +197,7 @@ const RightColumnNovo: React.FC = () => {
           </motion.div>
         ) : (
           <motion.nav
-            className={`fixed right-0 top-20 h-[calc(100vh-4rem)] bg-gradient-to-br from-[#191844] via-[#15143d] to-[#0f0e29] text-white ${
+            className={`z-10 fixed right-0 top-20 h-[calc(100vh-4rem)] bg-gradient-to-br from-[#191844] via-[#15143d] to-[#0f0e29] text-white ${
               isExpanded ? 'w-80' : 'w-20'
             } transition-all duration-300 ease-in-out shadow-lg flex flex-col rounded-bl-lg`}
             initial={false}
