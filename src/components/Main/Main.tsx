@@ -1,11 +1,14 @@
-// components/Main.tsx
 import React from "react";
 import Image from "next/image";
 import CountdownTimer from "./CountdownTimer";
+import FirstPlace from "./FirstPlace";
+import SecondPlace from "./SecondPlace";
+import ThirdPlace from "./ThirdPlace";
+// Removido: import ShareAndEarn from './ShareAndEarn';
 
 interface MainProps {
-  leftTargetDate: string; // Define o tipo da data alvo para o lado esquerdo
-  rightTargetDate: string; // Define o tipo da data alvo para o lado direito
+  leftTargetDate: string;
+  rightTargetDate: string;
 }
 
 const Main: React.FC<MainProps> = ({ leftTargetDate, rightTargetDate }) => {
@@ -16,7 +19,7 @@ const Main: React.FC<MainProps> = ({ leftTargetDate, rightTargetDate }) => {
           <div
             className="w-11/12 max-h-[350px] overflow-hidden rounded-2xl flex items-end relative"
             style={{
-              boxShadow: "0 20px 40px rgba(0, 0, 0, 0)", // Removendo sombra
+              boxShadow: "0 20px 40px rgba(0, 0, 0, 0)",
             }}
           >
             <Image
@@ -29,18 +32,19 @@ const Main: React.FC<MainProps> = ({ leftTargetDate, rightTargetDate }) => {
               objectFit="cover"
               priority
               className="rounded-2xl"
-              placeholder="blur" // Adiciona um blur de carregamento
-              blurDataURL="/assets/img/placeholder.jpg" // Placeholder de carregamento
+              placeholder="blur"
+              blurDataURL="/assets/img/placeholder.jpg"
             />
             <div className="absolute inset-0 grid grid-cols-12 rounded-2xl">
-              {/* Seção Esquerda */}
               <div className="col-span-12 md:col-span-6 flex flex-col justify-center items-start space-y-4 px-6 md:px-16 py-6">
-                <h2 className="text-white text-2xl md:text-3xl font-bold max-w-md">
-                  Lançamento do Jogo Vettano
+                <h2 className="text-white text-3xl md:text-4xl font-bold max-w-md">
+                  Lançamento do Vettano
                 </h2>
                 <h4 className="text-gray-200 text-sm md:text-base font-medium text-left mb-4 max-w-md">
-                  Venha participar do lançamento em {leftTargetDate}! O vencedor
-                  do primeiro ranking será premiado com uma conquista exclusiva!
+                  Seja um dos três primeiros a indicar amigos para assinatura
+                  VIP e receba recompensas exclusivas no lançamento em
+                  05/12/2024! Aproveite benefícios únicos e celebre o início do
+                  Vettano com itens especiais para você e seus convidados.
                 </h4>
                 <button
                   className="px-5 py-2 md:px-10 md:py-4 rounded-2xl text-white relative overflow-hidden transition-shadow duration-500 shadow-none border-2 border-[#5D52EE]"
@@ -64,9 +68,49 @@ const Main: React.FC<MainProps> = ({ leftTargetDate, rightTargetDate }) => {
                 <CountdownTimer targetDate={leftTargetDate} />
               </div>
 
-              {/* Seção Direita (Pré-estruturada e vazia) */}
               <div className="col-span-12 md:col-span-6 flex flex-col justify-center items-center space-y-4 px-6 md:px-16 py-6 relative">
-                {/* Conteúdo da direita removido, mantenha os estilos se necessário */}
+                <Image
+                  src="/assets/img/images/podium.png"
+                  alt="Imagem do Pódio"
+                  layout="intrinsic"
+                  width={766}
+                  height={218}
+                  className="absolute bottom-3 right-8"
+                  style={{
+                    width: "auto",
+                    height: "auto",
+                    maxWidth: "none",
+                    maxHeight: "none",
+                    transform: "scale(1.2)",
+                  }}
+                  priority
+                  quality={100}
+                />
+
+                {/* Subcomponentes do pódio */}
+                <FirstPlace top="30%" right="40%" />
+                <SecondPlace top="35%" right="74%" />
+                <ThirdPlace top="35%" right="7%" />
+
+                <Image
+                  src="/assets/img/images/share.svg"
+                  alt="Compartilhar"
+                  layout="intrinsic"
+                  width={766}
+                  height={218}
+                  className="absolute"
+                  style={{
+                    width: "auto",
+                    height: "auto",
+                    maxWidth: "none",
+                    maxHeight: "none",
+                    transform: "scale(1.4)",
+                    top: "8%",
+                    right: "7%"
+                  }}
+                  priority
+                  quality={100}
+                />
               </div>
             </div>
           </div>
