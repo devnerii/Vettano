@@ -19,7 +19,7 @@ const SecondPlace: React.FC<SecondPlaceProps> = ({
   left,
   bottom,
   profileImage = "https://avatar.iran.liara.run/public/31", // Substitua pelo caminho da imagem padrão
-  name = "injectivex", // Nome de exemplo
+  name = "Bogdanoff", // Nome de exemplo
 }) => {
   // Função para determinar o tamanho da fonte com base no comprimento do nome
   const getFontSize = (nameLength: number) => {
