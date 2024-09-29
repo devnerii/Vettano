@@ -37,7 +37,7 @@ const FirstPlace: React.FC<FirstPlaceProps> = ({
 
   return (
     <div
-      className="absolute flex flex-col items-center z-10"
+      className="absolute flex flex-col items-center z-0"
       style={{
         top: top || "auto",
         right: right || "auto",
