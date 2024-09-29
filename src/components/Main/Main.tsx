@@ -81,7 +81,7 @@ const Main: React.FC<MainProps> = ({ leftTargetDate, rightTargetDate }) => {
 
             <div className="absolute inset-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 2xl:grid-cols-12 rounded-2xl">
               {/* Seção Esquerda */}
-              <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6 flex flex-col justify-center items-start space-y-4 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16 2xl:px-16 py-2 sm:py-2 md:py-4 lg:py-6 xl:py-6 2xl:py-6 mt-[-40px] sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0">
+              <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6 flex flex-col justify-center items-start space-y-4 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16 2xl:px-16 py-4 sm:py-2 md:py-4 lg:py-6 xl:py-6 2xl:py-6 mt-[-40px] sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0">
                 <h2 className="text-white text-2xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl font-bold max-w-md">
                   Lançamento do Vettano
                 </h2>
