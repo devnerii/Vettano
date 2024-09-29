@@ -5,16 +5,21 @@ import { motion } from "framer-motion";
 
 interface AccountButtonsProps {
   singleButton?: boolean; // Prop opcional
+  createAccountText?: string; // Texto opcional para o botão "Criar Conta"
+  loginText?: string; // Texto opcional para o botão "Logar"
 }
 
-const AccountButtons: React.FC<AccountButtonsProps> = ({ singleButton = false }) => {
+const AccountButtons: React.FC<AccountButtonsProps> = ({
+  singleButton = false,
+  createAccountText = "Criar Conta", // Valor padrão
+  loginText = "Logar", // Valor padrão
+}) => {
   const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (singleButton) return; // Evita alterar estilos se for singleButton
     const target = e.currentTarget;
     target.style.animation =
       "gradientSlide 1.5s ease forwards, pulseGlow 1.5s infinite alternate";
-    target.style.background =
-      "linear-gradient(to right, #8E83FB, #5D52EE)";
+    target.style.background = "linear-gradient(to right, #8E83FB, #5D52EE)";
     target.style.color = "#fff";
     target.style.backgroundSize = "200% 200%";
   };
@@ -26,8 +31,7 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({ singleButton = false })
     target.style.animation = "none";
     target.style.background = "transparent";
     target.style.color = "";
-    target.style.boxShadow =
-      "0 0 15px rgba(93, 82, 238, 0.5)";
+    target.style.boxShadow = "0 0 15px rgba(93, 82, 238, 0.5)";
   };
 
   // Define estilos ativos para o botão "Logar"
@@ -58,7 +62,7 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({ singleButton = false })
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          Criar Conta
+          {createAccountText} {/* Texto customizável */}
         </motion.a>
       )}
       <motion.a
@@ -81,7 +85,7 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({ singleButton = false })
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        Logar
+        {loginText} {/* Texto customizável */}
       </motion.a>
     </>
   );

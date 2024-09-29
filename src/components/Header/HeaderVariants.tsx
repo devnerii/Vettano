@@ -110,7 +110,8 @@ const HeaderVariants: React.FC = () => {
             label="Depósito"
             gradientColors={["#8E83FB", "#5D52EE"]}
           />
-          <AccountButtons singleButton />
+          <AccountButtons
+           singleButton />
         </div>
       </div>
     </FallInAnimation>
