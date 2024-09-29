@@ -10,7 +10,12 @@ interface ActionButtonProps {
 const ActionButton: React.FC<ActionButtonProps> = ({ label, gradientColors }) => {
   return (
     <motion.button
-      className="px-3 py-1 md:px-4 md:py-2 rounded-full text-white relative overflow-hidden transition duration-500 shadow-none"
+    className="px-4 sm:px-3 md:px-4 lg:px-4 xl:px-4 2xl:px-4 
+    py-2 sm:py-1 md:py-2 lg:py-2 xl:py-2 2xl:py-2 
+    rounded-full text-white 
+    relative overflow-hidden 
+    transition duration-500 shadow-none"
+
       style={{
         background: `linear-gradient(to right, ${gradientColors[0]}, ${gradientColors[1]})`,
         fontFamily: "Montserrat",
