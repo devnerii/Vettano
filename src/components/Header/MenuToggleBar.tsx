@@ -1,5 +1,8 @@
+// src/components/Header/MenuToggleBar.tsx
+
 import React from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { HiMiniBars3CenterLeft } from "react-icons/hi2"; // Ícone de menu aberto
+import { MdOutlineCloseFullscreen } from "react-icons/md"; // Ícone de menu fechado
 
 interface MenuToggleBarProps {
   isMenuOpen: boolean;
@@ -10,10 +13,14 @@ const MenuToggleBar: React.FC<MenuToggleBarProps> = ({ isMenuOpen, toggleMenu })
   return (
     <button
       onClick={toggleMenu}
-      className="text-white focus:outline-none md:hidden"
+      className="text-white focus:outline-none"
       aria-label="Toggle menu"
     >
-      {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+      {isMenuOpen ? (
+        <MdOutlineCloseFullscreen size={30} color="#6966A4" /> // Definindo a cor no ícone MdOutlineCloseFullscreen
+      ) : (
+        <HiMiniBars3CenterLeft size={30} color="#6966A4" /> // Definindo a cor no ícone HiMiniBars3CenterLeft
+      )}
     </button>
   );
 };

@@ -3,11 +3,11 @@
 import { useState } from "react";
 
 const useHeaderState = () => {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isLoaded, setIsLoaded] = useState<boolean>(false);
-  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState<boolean>(false);
-  const [language, setLanguage] = useState<string>("PT");
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLanguageMenuOpen, setIsLanguageMenuOpen] = useState(false);
+  const [language, setLanguage] = useState("PT");
 
   const toggleDarkMode = () => setIsDarkMode((prev) => !prev);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
@@ -21,10 +21,10 @@ const useHeaderState = () => {
     isLanguageMenuOpen,
     language,
     toggleDarkMode,
-    toggleMenu,
     toggleLanguageMenu,
     changeLanguage,
     setIsLoaded,
+    toggleMenu,
   };
 };
 

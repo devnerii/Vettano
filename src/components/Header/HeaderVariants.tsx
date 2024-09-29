@@ -8,7 +8,6 @@ import IconButtons from "./IconButtons";
 import MobileMenu from "./MobileMenu";
 import LoadingScreen from "./LoadingScreen";
 import useHeaderState from "./useHeaderState";
-import Navbar from "./Navbar";
 import ActionButton from "./ActionButton";
 import BalanceButton from "./BalanceButton";
 import FallInAnimation from "../animations/FallInAnimation";
@@ -26,7 +25,7 @@ const HeaderVariants: React.FC = () => {
     toggleLanguageMenu,
     changeLanguage,
     setIsLoaded,
-    toggleMenu, // Certifique-se de que toggleMenu está disponível no hook useHeaderState
+    toggleMenu,
   } = useHeaderState();
 
   const breakpoint = useBreakpoint();
@@ -106,12 +105,11 @@ const HeaderVariants: React.FC = () => {
         </div>
 
         <div className="col-span-7 flex justify-end items-center space-x-2">
-            <ActionButton
+          <ActionButton
             label="Depósito"
             gradientColors={["#8E83FB", "#5D52EE"]}
           />
-          <AccountButtons
-           singleButton />
+          <AccountButtons singleButton />
         </div>
       </div>
     </FallInAnimation>
@@ -128,7 +126,7 @@ const HeaderVariants: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="relative shadow-lg"> {/* Contêiner com sombra */}
       <header className="relative bg-custom-bg text-white shadow-md transition-colors duration-300 ease-in-out z-50">
         {!isLoaded ? (
           <LoadingScreen />
@@ -136,14 +134,44 @@ const HeaderVariants: React.FC = () => {
           renderHeader()
         )}
 
-        <MobileMenu
-          isMenuOpen={isMenuOpen}
-          menuItems={["Criar Conta", "Logar", "Home", "Sobre", "Contato"]}
-        />
-
-        <Navbar isMenuOpen={isMenuOpen} />
+        <MobileMenu isMenuOpen={isMenuOpen}>
+          {/* Conteúdo personalizável do menu mobile */}
+          <nav className="flex flex-col space-y-4">
+            <a
+              href="/criar-conta"
+              className="text-white text-lg hover:bg-blue-700 p-2 rounded"
+            >
+              Criar Conta
+            </a>
+            <a
+              href="/logar"
+              className="text-white text-lg hover:bg-blue-700 p-2 rounded"
+            >
+              Logar
+            </a>
+            <a
+              href="/home"
+              className="text-white text-lg hover:bg-blue-700 p-2 rounded"
+            >
+              Home
+            </a>
+            <a
+              href="/sobre"
+              className="text-white text-lg hover:bg-blue-700 p-2 rounded"
+            >
+              Sobre
+            </a>
+            <a
+              href="/contato"
+              className="text-white text-lg hover:bg-blue-700 p-2 rounded"
+            >
+              Contato
+            </a>
+            {/* Adicione mais conteúdo personalizado conforme necessário */}
+          </nav>
+        </MobileMenu>
       </header>
-    </>
+    </div>
   );
 };
 
