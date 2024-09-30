@@ -96,7 +96,7 @@ const LeftColumnNovo: React.FC = () => {
         {!isExpanded ? (
           <motion.div
             key="expand-icon"
-            className="fixed left-0 bottom-20 p-3 z-50 cursor-pointer bg-[#282759] rounded-r-xl"
+            className="fixed left-0 bottom-20 p-3 z-0 cursor-pointer bg-[#282759] rounded-r-xl"
             onClick={() => setIsExpanded(true)}
             style={{
               width: "3rem",
