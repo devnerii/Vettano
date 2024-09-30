@@ -105,13 +105,13 @@ const HeaderVariants: React.FC = () => {
         </div>
 
         <div className="col-span-7 flex justify-end items-center space-x-2">
-            {/* <IconButtons isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} /> */}
-        <LanguageSelector
+            <IconButtons isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+        {/* <LanguageSelector
             language={language}
             isLanguageMenuOpen={isLanguageMenuOpen}
             toggleLanguageMenu={toggleLanguageMenu}
             changeLanguage={changeLanguage}
-          />
+          /> */}
           <AccountButtons singleButton />
         </div>
       </div>
