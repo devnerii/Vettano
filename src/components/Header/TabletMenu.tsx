@@ -19,7 +19,7 @@ import { FaArrowRightToBracket } from "react-icons/fa6";
 import { GrLanguage } from "react-icons/gr";
 import Image from "next/image";
 
-interface MobileMenuProps {
+interface TabletMenuProps {
   isMenuOpen: boolean;
   language: string;
   isLanguageMenuOpen: boolean;
@@ -60,7 +60,7 @@ const socialLinks = [
   { icon: <FaTiktok />, href: "#" },
 ];
 
-const MobileMenu: React.FC<MobileMenuProps> = ({
+const TabletMenu: React.FC<TabletMenuProps> = ({
   isMenuOpen,
   language,
   isLanguageMenuOpen,
@@ -80,7 +80,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
     >
       {(ref: React.Ref<HTMLDivElement>) => (
         <div
-          className="md:hidden bg-[#1d1c49] w-full shadow-lg -z-10"
+          className="bg-[#1d1c49] w-[25rem] h-[calc(100vh-5rem)] shadow-lg -z-10 overflow-hidden" // Adicionado overflow-hidden aqui
           ref={ref}
           style={{ position: "absolute", top: "100%", left: 0 }}
         >
@@ -269,4 +269,4 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
   );
 };
 
-export default MobileMenu;
+export default TabletMenu;

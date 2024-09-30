@@ -1,11 +1,10 @@
-// src/components/Header/HeaderVariants.tsx
-
 import React from "react";
 import Logo from "./Logo";
 import LanguageSelector from "./LanguageSelector";
 import AccountButtons from "./AccountButtons";
 import IconButtons from "./IconButtons";
 import MobileMenu from "./MobileMenu";
+import TabletMenu from "./TabletMenu"; // Importando TabletMenu
 import LoadingScreen from "./LoadingScreen";
 import useHeaderState from "./useHeaderState";
 import ActionButton from "./ActionButton";
@@ -33,6 +32,11 @@ const HeaderVariants: React.FC = () => {
   React.useEffect(() => {
     setIsLoaded(true);
   }, [setIsLoaded]);
+
+  // Log de depuração para verificar o estado do menu
+  React.useEffect(() => {
+    console.log("Menu está aberto:", isMenuOpen);
+  }, [isMenuOpen]);
 
   const renderLargeHeader = () => (
     <FallInAnimation duration={1} initialY={-50}>
@@ -63,7 +67,10 @@ const HeaderVariants: React.FC = () => {
         <div className="relative col-span-12 md:col-span-4 flex justify-end items-center space-x-1 md:space-x-2">
           <div className="ml-5 absolute left-0 top-0 bottom-0 w-0.5 bg-[#282759] md:block hidden" />
 
-          <IconButtons isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+          <IconButtons
+            isDarkMode={isDarkMode}
+            toggleDarkMode={toggleDarkMode}
+          />
 
           <AccountButtons />
         </div>
@@ -72,25 +79,44 @@ const HeaderVariants: React.FC = () => {
   );
 
   const renderMediumHeader = () => (
-    <FallInAnimation duration={1} initialY={-50}>
-      <div
-        className="container mx-auto custom-max-w p-2 grid grid-cols-12 gap-4 items-center h-20"
-        role="banner"
-      >
-        <div className="col-span-6 flex items-center space-x-2">
-          <MenuToggleBar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
-          <Logo />
-        </div>
+    <>
+      <FallInAnimation duration={1} initialY={-50}>
+        <div
+          className="container mx-auto custom-max-w p-2 px-8 grid grid-cols-12 gap-4 items-center h-20"
+          role="banner"
+        >
+          <div className="col-span-6 flex items-center space-x-2">
+            {/* MenuToggleBar vai alternar o estado isMenuOpen */}
+            <MenuToggleBar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+            <Logo />
+          </div>
 
-        <div className="col-span-6 flex justify-end items-center space-x-2">
-          <ActionButton
-            label="Criar Conta"
-            gradientColors={["#8E83FB", "#5D52EE"]}
-          />
-          <AccountButtons />
+          <div className="col-span-6 flex justify-end items-center space-x-2">
+            <IconButtons
+              isDarkMode={isDarkMode}
+              toggleDarkMode={toggleDarkMode}
+            />
+            <AccountButtons />
+          </div>
         </div>
-      </div>
-    </FallInAnimation>
+      </FallInAnimation>
+
+      {/* Renderiza o TabletMenu se o isMenuOpen for true */}
+      {isMenuOpen && (
+        <TabletMenu
+          isMenuOpen={isMenuOpen}
+          language={language}
+          isLanguageMenuOpen={isLanguageMenuOpen}
+          toggleLanguageMenu={toggleLanguageMenu}
+          changeLanguage={changeLanguage}
+        >
+          {/* Conteúdo personalizável do menu tablet */}
+          <nav className="flex flex-col space-y-4">
+            {/* Adicione mais conteúdo personalizado conforme necessário */}
+          </nav>
+        </TabletMenu>
+      )}
+    </>
   );
 
   const renderSmallHeader = () => (
@@ -105,13 +131,10 @@ const HeaderVariants: React.FC = () => {
         </div>
 
         <div className="col-span-7 flex justify-end items-center space-x-2">
-            <IconButtons isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-        {/* <LanguageSelector
-            language={language}
-            isLanguageMenuOpen={isLanguageMenuOpen}
-            toggleLanguageMenu={toggleLanguageMenu}
-            changeLanguage={changeLanguage}
-          /> */}
+          <IconButtons
+            isDarkMode={isDarkMode}
+            toggleDarkMode={toggleDarkMode}
+          />
           <AccountButtons singleButton />
         </div>
       </div>
@@ -119,9 +142,9 @@ const HeaderVariants: React.FC = () => {
   );
 
   const renderHeader = () => {
-    if (breakpoint === "lg" || breakpoint === "xl" || breakpoint === "2xl") {
+    if (breakpoint === "xl" || breakpoint === "2xl") {
       return renderLargeHeader();
-    } else if (breakpoint === "md") {
+    } else if (breakpoint === "md" || breakpoint === "lg") {
       return renderMediumHeader();
     } else {
       return renderSmallHeader();
@@ -131,16 +154,18 @@ const HeaderVariants: React.FC = () => {
   return (
     <>
       <header className="relative bg-custom-bg text-white shadow-md transition-colors duration-300 ease-in-out z-50">
-        {!isLoaded ? (
-          <LoadingScreen />
-        ) : (
-          renderHeader()
-        )}
+        {!isLoaded ? <LoadingScreen /> : renderHeader()}
 
-        <MobileMenu isMenuOpen={isMenuOpen}>
+        {/* Renderizando MobileMenu apenas em telas pequenas */}
+        <MobileMenu
+          isMenuOpen={isMenuOpen}
+          language={language}
+          isLanguageMenuOpen={isLanguageMenuOpen}
+          toggleLanguageMenu={toggleLanguageMenu}
+          changeLanguage={changeLanguage}
+        >
           {/* Conteúdo personalizável do menu mobile */}
           <nav className="flex flex-col space-y-4">
-           
             {/* Adicione mais conteúdo personalizado conforme necessário */}
           </nav>
         </MobileMenu>
