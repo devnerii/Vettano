@@ -1,7 +1,7 @@
-// components/IconButtons.tsx
 import React from "react";
 import { FaSearch, FaSun, FaMoon, FaVolumeUp } from "react-icons/fa";
 import { motion } from "framer-motion";
+import useBreakpoint from "../../hooks/useBreakpoint"; // Importando o hook useBreakpoint
 
 interface IconButtonsProps {
   isDarkMode: boolean;
@@ -9,15 +9,23 @@ interface IconButtonsProps {
 }
 
 const IconButtons: React.FC<IconButtonsProps> = ({ isDarkMode, toggleDarkMode }) => {
+  const breakpoint = useBreakpoint(); // Obtendo o breakpoint atual
+
   const icons = [
-    { Icon: FaSearch, action: undefined },
+    { Icon: FaSearch, action: undefined, showOnBreakpoint: "sm" }, // Adicionando a condição de breakpoint
     { Icon: isDarkMode ? FaSun : FaMoon, action: toggleDarkMode },
     { Icon: FaVolumeUp, action: undefined },
   ];
 
   return (
     <>
-      {icons.map(({ Icon, action }, index) => {
+      {icons.map(({ Icon, action, showOnBreakpoint }, index) => {
+        // Verificando se o ícone deve ser mostrado com base no breakpoint
+        const shouldShowIcon =
+          !showOnBreakpoint || breakpoint !== "base" || (showOnBreakpoint === "sm" && breakpoint !== "base");
+
+        if (!shouldShowIcon) return null; // Não renderiza o ícone se a condição não for atendida
+
         const borderColor = "border-[#242353]";
         const gradient = "from-[#8E83FB] to-[#5D52EE]";
         return (
