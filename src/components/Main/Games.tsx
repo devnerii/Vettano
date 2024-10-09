@@ -1,7 +1,7 @@
 // Games.tsx
 import React from "react";
 import { FaCrown } from "react-icons/fa";
-import { FaRankingStar } from "react-icons/fa6";
+import { MdLeaderboard } from "react-icons/md";
 
 const Games: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const Games: React.FC = () => {
 
         <div className="col-span-12 flex justify-start items-center mt-4 relative">
           <div className="w-1/2 h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white mr-2">
-            teste
+            <h1>Modo Clássico</h1>
           </div>
           <div className="w-1/2 h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white ml-2">
             teste
@@ -51,7 +51,7 @@ const Games: React.FC = () => {
         </div>
 
         <div className="col-span-12 flex justify-start items-center mt-6 sm:mt-6 md:mt-6 lg:mt-6 xl:mt-6 2xl:mt-6 relative">
-          <FaRankingStar className="text-[#ffa723] items-start text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-xl font-bold mr-2" />
+          <MdLeaderboard className="text-[#ffa723] items-start text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-xl font-bold mr-2" />
           <h1 className="text-white items-start text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-xl font-bold">
             Rank
           </h1>
