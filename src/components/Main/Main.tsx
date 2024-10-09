@@ -1,5 +1,5 @@
 import React from "react";
-import ContentContainer from "./ContentContainer";
+import CampaignSection from "./CampaignSection";
 import useBreakpoint from "../../hooks/useBreakpoint";
 
 interface MainProps {
@@ -11,11 +11,12 @@ const Main: React.FC<MainProps> = ({ leftTargetDate, rightTargetDate }) => {
   const breakpoint = useBreakpoint();
 
   return (
-    <ContentContainer
+    <CampaignSection
       leftTargetDate={leftTargetDate}
       rightTargetDate={rightTargetDate}
       breakpoint={breakpoint}
     />
+    
   );
 };
 

@@ -1,4 +1,3 @@
-// ContentContainer.tsx
 import React from "react";
 import Image from "next/image";
 import CountdownTimer from "./CountdownTimer";
@@ -6,18 +5,18 @@ import FirstPlace from "./FirstPlace";
 import SecondPlace from "./SecondPlace";
 import ThirdPlace from "./ThirdPlace";
 
-interface ContentContainerProps {
+interface CampaignSectionProps {
   leftTargetDate: string;
   rightTargetDate: string;
   breakpoint: string;
 }
 
-const ContentContainer: React.FC<ContentContainerProps> = ({
+const CampaignSection: React.FC<CampaignSectionProps> = ({
   leftTargetDate,
   rightTargetDate,
   breakpoint,
 }) => {
-  // Defina as posições para cada breakpoint
+  // Define positions for each breakpoint
   const positions = {
     base: {
       first: { top: "25%", right: "35%" },
@@ -40,23 +39,23 @@ const ContentContainer: React.FC<ContentContainerProps> = ({
       third: { top: "31%", right: "4%" },
     },
     xl: {
-      first: { top: "30%", right: "42%" }, // Ajustado
-      second: { top: "36%", right: "75%" }, // Ajustado
-      third: { top: "36%", right: "6%" }, // Ajustado
+      first: { top: "30%", right: "42%" },
+      second: { top: "36%", right: "75%" },
+      third: { top: "36%", right: "6%" },
     },
     "2xl": {
-      first: { top: "38%", right: "55%" }, // Ajustado
-      second: { top: "43%", right: "85%" }, // Ajustado
-      third: { top: "43%", right: "15%" }, // Ajustado
+      first: { top: "38%", right: "55%" },
+      second: { top: "43%", right: "85%" },
+      third: { top: "43%", right: "15%" },
     },
   };
 
-  // Calcule as posições atuais com base no breakpoint
+  // Calculate current positions based on breakpoint
   const currentPositions =
     positions[breakpoint as keyof typeof positions] || positions.base;
 
   return (
-    <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-0 lg:px-4 xl:px-8 2xl:px-8 max-h-[700px] sm:max-h-[900px] overflow-hidden">
+    <section className="container mx-auto max-w-screen-2xl px-4 sm:px-6 md:px-0 lg:px-4 xl:px-8 2xl:px-8 max-h-[700px] sm:max-h-[900px] overflow-hidden" aria-labelledby="campaign-heading">
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 2xl:grid-cols-12 w-full h-full">
         <div className="col-span-12 flex justify-center mt-10 sm:mt-10 md:mt-10 lg:mt-10 xl:mt-10 2xl:mt-10 relative">
           <div
@@ -84,17 +83,17 @@ const ContentContainer: React.FC<ContentContainerProps> = ({
             />
 
             <div className="absolute inset-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 2xl:grid-cols-12 rounded-2xl">
-              {/* Seção Esquerda */}
+              {/* Left Section */}
               <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6 flex flex-col justify-center items-start space-y-4 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16 2xl:px-16 py-4 sm:py-2 md:py-4 lg:py-6 xl:py-6 2xl:py-6 mt-[-40px] sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0">
-                <h2 className="text-white text-2xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl font-bold max-w-md">
+                <h2 id="campaign-heading" className="text-white text-2xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl font-bold max-w-md">
                   Lançamento do Vettano
                 </h2>
-                <h4 className="text-gray-200 text-xs sm:text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-base font-medium text-left mb-4 max-w-md">
+                <p className="text-gray-200 text-xs sm:text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-base font-medium text-left mb-4 max-w-md">
                   Seja um dos três primeiros a indicar amigos para assinatura
                   VIP e receba recompensas exclusivas no lançamento em
                   05/12/2024! Aproveite benefícios únicos e celebre o início do
                   Vettano com itens especiais para você e seus convidados.
-                </h4>
+                </p>
                 <div className="flex sm:flex-row items-center justify-center sm:justify-start space-x-4">
                   <button
                     className="px-4 sm:px-5 md:px-4 lg:px-6 xl:px-10 2xl:px-8 py-2 sm:py-3 md:py-3 lg:py-3 xl:py-5 2xl:py-5 rounded-2xl text-white relative overflow-hidden transition-shadow duration-500 shadow-none border-2 border-[#5D52EE] 
@@ -112,21 +111,22 @@ const ContentContainer: React.FC<ContentContainerProps> = ({
                       e.currentTarget.style.transition = "box-shadow 0.5s ease";
                       e.currentTarget.style.boxShadow = "none";
                     }}
+                    aria-label="Inscreva-se agora para o lançamento do Vettano"
                   >
                     Inscreva-se Agora!
                   </button>
 
-                  {["md", "sm", "base"].includes(breakpoint) && (
+                  {(["md", "sm", "base"].includes(breakpoint)) && (
                     <CountdownTimer targetDate={leftTargetDate} />
                   )}
                 </div>
 
-                {["lg", "xl", "2xl"].includes(breakpoint) && (
+                {(["lg", "xl", "2xl"].includes(breakpoint)) && (
                   <CountdownTimer targetDate={leftTargetDate} />
                 )}
               </div>
 
-              {/* Seção Direita */}
+              {/* Right Section */}
               <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6 flex flex-col justify-center items-center space-y-4 px-4 sm:px-6 md:px-16 lg:px-16 xl:px-16 2xl:px-16 py-14 sm:py-6 md:py-6 lg:py-6 xl:py-6 2xl:py-6 relative">
                 <Image
                   src="/assets/img/images/podium.png"
@@ -160,7 +160,7 @@ const ContentContainer: React.FC<ContentContainerProps> = ({
 
                 <Image
                   src="/assets/img/images/share.svg"
-                  alt="Compartilhar"
+                  alt="Ícone para Compartilhar"
                   layout="intrinsic"
                   width={766}
                   height={218}
@@ -180,8 +180,8 @@ const ContentContainer: React.FC<ContentContainerProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default ContentContainer;
+export default CampaignSection;
