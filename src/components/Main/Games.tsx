@@ -1,6 +1,7 @@
 // Games.tsx
 import React from "react";
 import { FaCrown } from "react-icons/fa";
+import { FaRankingStar } from "react-icons/fa6";
 
 const Games: React.FC = () => {
   return (
@@ -31,6 +32,34 @@ const Games: React.FC = () => {
           </div>
           <div className="w-1/3 h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white ml-2">
             teste 3
+          </div>
+        </div>
+
+        <div className="col-span-12 flex justify-between items-center mt-4 relative">
+          <div className="w-1/4 h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white mr-2">
+            teste 1
+          </div>
+          <div className="w-1/4 h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white mx-2">
+            teste 2
+          </div>
+          <div className="w-1/4 h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white mx-2">
+            teste 3
+          </div>
+          <div className="w-1/4 h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white ml-2">
+            teste 4
+          </div>
+        </div>
+
+        <div className="col-span-12 flex justify-start items-center mt-6 sm:mt-6 md:mt-6 lg:mt-6 xl:mt-6 2xl:mt-6 relative">
+          <FaRankingStar className="text-[#ffa723] items-start text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-xl font-bold mr-2" />
+          <h1 className="text-white items-start text-base sm:text-lg md:text-lg lg:text-lg xl:text-lg 2xl:text-xl font-bold">
+            Rank
+          </h1>
+        </div>
+
+        <div className="col-span-12 mt-4 relative">
+          <div className="w-full h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white">
+            teste
           </div>
         </div>
       </div>
