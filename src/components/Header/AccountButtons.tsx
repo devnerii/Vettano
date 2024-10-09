@@ -67,8 +67,8 @@ const AccountButtons: React.FC<AccountButtonsProps> = ({
       )}
       <motion.a
         href="#"
-        className="px-6 sm:px-2 md:px-3 lg:px-3 xl:px-3 2xl:px-3 
-           py-2 sm:py-1 md:py-2 lg:py-2 xl:py-2 2xl:py-2 
+        className="px-6 sm:px-16 md:px-3 lg:px-3 xl:px-3 2xl:px-3 
+           py-2 sm:py-3 md:py-2 lg:py-2 xl:py-2 2xl:py-2 
            rounded-full border border-[#242353] 
            dark:border-[#5D52EE] text-white 
            relative overflow-hidden 

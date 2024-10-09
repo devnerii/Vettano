@@ -24,9 +24,9 @@ const CampaignSection: React.FC<CampaignSectionProps> = ({
       third: { top: "32%", right: "2%" },
     },
     sm: {
-      first: { top: "32%", right: "42%" },
-      second: { top: "37%", right: "76%" },
-      third: { top: "37%", right: "9%" },
+      first: { top: "16%", right: "40%" },
+      second: { top: "22%", right: "72%" },
+      third: { top: "24%", right: "5%" },
     },
     md: {
       first: { top: "22%", right: "42%" },
@@ -84,11 +84,11 @@ const CampaignSection: React.FC<CampaignSectionProps> = ({
 
             <div className="absolute inset-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 2xl:grid-cols-12 rounded-2xl">
               {/* Left Section */}
-              <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6 flex flex-col justify-center items-start space-y-4 px-6 sm:px-6 md:px-10 lg:px-16 xl:px-16 2xl:px-16 py-4 sm:py-2 md:py-4 lg:py-6 xl:py-6 2xl:py-6 mt-[-40px] sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0">
-                <h2 id="campaign-heading" className="text-white text-2xl sm:text-3xl md:text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl font-bold max-w-md">
+              <div className="col-span-12 sm:col-span-12 md:col-span-6 lg:col-span-6 xl:col-span-6 2xl:col-span-6 flex flex-col justify-center items-start space-y-4 px-6 sm:px-8 md:px-10 lg:px-16 xl:px-16 2xl:px-16 py-4 sm:py-0 md:py-4 lg:py-6 xl:py-6 2xl:py-6 mt-[-40px] sm:mt-[-90px] md:mt-0 lg:mt-0 xl:mt-0 2xl:mt-0">
+                <h2 id="campaign-heading" className="text-white text-2xl sm:text-4xl md:text-xl lg:text-2xl xl:text-4xl 2xl:text-5xl font-bold max-w-md">
                   Lançamento do Vettano
                 </h2>
-                <p className="text-gray-200 text-xs sm:text-sm md:text-xs lg:text-sm xl:text-base 2xl:text-base font-medium text-left mb-4 max-w-md">
+                <p className="text-gray-200 text-xs sm:text-xl md:text-xs lg:text-sm xl:text-base 2xl:text-base font-medium text-left mb-4 max-w-md">
                   Seja um dos três primeiros a indicar amigos para assinatura
                   VIP e receba recompensas exclusivas no lançamento em
                   05/12/2024! Aproveite benefícios únicos e celebre o início do
@@ -96,7 +96,7 @@ const CampaignSection: React.FC<CampaignSectionProps> = ({
                 </p>
                 <div className="flex sm:flex-row items-center justify-center sm:justify-start space-x-4">
                   <button
-                    className="px-4 sm:px-5 md:px-4 lg:px-6 xl:px-10 2xl:px-8 py-2 sm:py-3 md:py-3 lg:py-3 xl:py-5 2xl:py-5 rounded-2xl text-white relative overflow-hidden transition-shadow duration-500 shadow-none border-2 border-[#5D52EE] 
+                    className="px-4 sm:px-20 md:px-4 lg:px-6 xl:px-10 2xl:px-8 py-2 sm:py-3 md:py-3 lg:py-3 xl:py-5 2xl:py-5 rounded-2xl text-white relative overflow-hidden transition-shadow duration-500 shadow-none border-2 border-[#5D52EE] 
     text-xs sm:text-sm md:text-xs lg:text-base xl:text-base 2xl:text-lg whitespace-nowrap"
                     style={{
                       background: "linear-gradient(to right, #8E83FB, #5D52EE)",
@@ -134,7 +134,7 @@ const CampaignSection: React.FC<CampaignSectionProps> = ({
                   layout="intrinsic"
                   width={766}
                   height={218}
-                  className="absolute bottom-0 sm:bottom-6 md:bottom-3 lg:bottom-4 xl:bottom-6 2xl:bottom-6 right-0 sm:right-12 md:right-8 lg:right-12 xl:right-10 2xl:right-12 scale-110 sm:scale-130 md:scale-130 lg:scale-130 xl:scale-130 2xl:scale-130"
+                  className="absolute bottom-0 sm:bottom-4 md:bottom-3 lg:bottom-4 xl:bottom-6 2xl:bottom-6 right-0 sm:right-0 md:right-8 lg:right-12 xl:right-10 2xl:right-12 scale-110 sm:scale-125 md:scale-130 lg:scale-130 xl:scale-130 2xl:scale-130"
                   style={{
                     width: "auto",
                     height: "auto",
@@ -164,7 +164,7 @@ const CampaignSection: React.FC<CampaignSectionProps> = ({
                   layout="intrinsic"
                   width={766}
                   height={218}
-                  className="absolute right-0 sm:right-12 md:right-8 lg:right-12 xl:right-10 2xl:right-20 top-2 sm:top-6 md:top-3 lg:top-6 xl:top-10 2xl:top-12"
+                  className="absolute right-0 sm:right-0 md:right-8 lg:right-12 xl:right-10 2xl:right-20 top-2 sm:top-[-28px] md:top-3 lg:top-6 xl:top-10 2xl:top-12"
                   style={{
                     width: "auto",
                     height: "auto",
