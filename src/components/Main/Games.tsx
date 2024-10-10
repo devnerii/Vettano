@@ -21,7 +21,7 @@ const Games: React.FC = () => {
               Modo Clássico
             </h1>
             <button
-              className="px-4 sm:px-20 md:px-4 lg:px-6 xl:px-12 2xl:px-8 py-2 sm:py-3 md:py-3 lg:py-3 xl:py-3 2xl:py-5 rounded-2xl text-white relative z-10 overflow-hidden transition-shadow duration-500 shadow-none border-2 border-[#5D52EE] 
+              className="px-4 sm:px-20 md:px-4 lg:px-6 xl:px-12 2xl:px-16 py-2 sm:py-3 md:py-3 lg:py-3 xl:py-3 2xl:py-3 rounded-2xl text-white relative z-10 overflow-hidden transition-shadow duration-500 shadow-none border-2 border-[#5D52EE] 
     text-xs sm:text-sm md:text-xs lg:text-base xl:text-base 2xl:text-lg whitespace-nowrap mt-3"
               style={{
                 background: "linear-gradient(to right, #8E83FB, #5D52EE)",
