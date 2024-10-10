@@ -41,7 +41,7 @@ const HeaderVariants: React.FC = () => {
   const renderLargeHeader = () => (
     <FallInAnimation duration={1} initialY={-50}>
       <div
-        className="container mx-auto custom-max-w p-1 md:p-3 grid grid-cols-12 gap-4 items-center h-20 md:h-22"
+        className="container mx-auto custom-max-w p-1 md:p-3 grid grid-cols-12 gap-4 2xl:px-0 items-center lg:px-0 h-20 md:h-22 2xl:max-w-[1365px]"
         role="banner"
       >
         <div className="col-span-12 md:col-span-2">
@@ -82,7 +82,7 @@ const HeaderVariants: React.FC = () => {
     <>
       <FallInAnimation duration={1} initialY={-50}>
         <div
-          className="container mx-auto custom-max-w p-2 px-8 grid grid-cols-12 gap-4 items-center h-20"
+          className="container mx-auto custom-max-w p-2 px-8 lg:px-14 grid grid-cols-12 gap-4 items-center h-20"
           role="banner"
         >
           <div className="col-span-6 flex items-center space-x-2">

@@ -44,9 +44,9 @@ const CampaignSection: React.FC<CampaignSectionProps> = ({
       third: { top: "36%", right: "6%" },
     },
     "2xl": {
-      first: { top: "38%", right: "55%" },
-      second: { top: "43%", right: "85%" },
-      third: { top: "43%", right: "15%" },
+      first: { top: "30%", right: "43%" },
+      second: { top: "36%", right: "78%" },
+      third: { top: "36%", right: "5%" },
     },
   };
 
