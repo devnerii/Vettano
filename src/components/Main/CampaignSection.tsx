@@ -164,7 +164,7 @@ const CampaignSection: React.FC<CampaignSectionProps> = ({
                   layout="intrinsic"
                   width={766}
                   height={218}
-                  className="absolute right-0 sm:right-0 md:right-8 lg:right-12 xl:right-10 2xl:right-20 top-2 sm:top-[-28px] md:top-3 lg:top-6 xl:top-10 2xl:top-12"
+                  className="absolute right-0 sm:right-0 md:right-8 lg:right-12 xl:right-10 2xl:right-14 top-2 sm:top-[-28px] md:top-3 lg:top-6 xl:top-10 2xl:top-12"
                   style={{
                     width: "auto",
                     height: "auto",
