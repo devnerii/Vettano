@@ -2,6 +2,7 @@
 import React from "react";
 import { FaCrown } from "react-icons/fa";
 import { MdLeaderboard } from "react-icons/md";
+import Image from "next/image";
 
 const Games: React.FC = () => {
   return (
@@ -15,9 +16,42 @@ const Games: React.FC = () => {
         </div>
 
         <div className="col-span-12 flex justify-start items-center mt-4 relative">
-          <div className="w-1/2 h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white mr-2">
-            <h1>Modo Clássico</h1>
+          <div className="w-1/2 h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white mr-2 px-12 py-28 relative overflow-hidden">
+            <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold">
+              Modo Clássico
+            </h1>
+            <button
+              className="px-4 sm:px-20 md:px-4 lg:px-6 xl:px-12 2xl:px-8 py-2 sm:py-3 md:py-3 lg:py-3 xl:py-3 2xl:py-5 rounded-2xl text-white relative overflow-hidden transition-shadow duration-500 shadow-none border-2 border-[#5D52EE] 
+    text-xs sm:text-sm md:text-xs lg:text-base xl:text-base 2xl:text-lg whitespace-nowrap mt-3"
+              style={{
+                background: "linear-gradient(to right, #8E83FB, #5D52EE)",
+                fontFamily: "Montserrat",
+                fontWeight: 500,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow =
+                  "0 0 30px rgba(96, 108, 245, 0.8), 0 0 40px rgba(93, 82, 238, 0.6)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transition = "box-shadow 0.5s ease";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+              aria-label="Jogue agora o modo de jogo Clássico"
+            >
+              Jogar
+            </button>
+
+            <div className="absolute top-1/2 left-28 transform -translate-y-1/2 w-full h-full scale-125 overflow-hidden">
+              <Image
+                src="/assets/img/images/pantera_com_dourado.png"
+                alt="Pantera com Dourado"
+                layout="fill"
+                objectFit="contain"
+                className="rounded-lg"
+              />
+            </div>
           </div>
+
           <div className="w-1/2 h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white ml-2">
             teste
           </div>
