@@ -98,7 +98,7 @@ const Games: React.FC = () => {
           </div>
 
           <div className="w-full sm:w-1/3 h-64 rounded-lg px-12 py-28 text-white relative bg-gradient-to-b from-[#1D1C49] to-[#323179] overflow-hidden">
-          <div className="ml-24 mt-28 absolute inset-0 bg-blue-700 opacity-90 blur-3xl transform translate-x-4 md:translate-x-8 pointer-events-none"></div>
+            <div className="ml-24 mt-28 absolute inset-0 bg-blue-700 opacity-90 blur-3xl transform translate-x-4 md:translate-x-8 pointer-events-none"></div>
             {/* Imagem de fundo */}
             <Image
               src="/assets/img/images/tesouro.png"
@@ -119,8 +119,27 @@ const Games: React.FC = () => {
               Jogar
             </CustomButton>
           </div>
-          <div className="w-full sm:w-1/3 h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white">
-            teste 3
+          <div className="w-full sm:w-1/3 h-64 rounded-lg px-12 py-28 text-white relative bg-gradient-to-b from-[#1D1C49] to-[#323179] overflow-hidden">
+            {/* Sobreposição escura */}
+            <div className="absolute inset-0 bg-black/10 z-10"></div>
+
+            <button className="absolute z-10 font-semibold text-sm text-white py-2 px-8 rounded-full bg-[#5048A3] top-10 left-10">
+              Em Breve
+            </button>
+
+            {/* Imagem de fundo */}
+            <Image
+              src="/assets/img/images/mines-blurred.webp"
+              alt="Modo Livre Imagem"
+              layout="fill"
+              objectFit="contain"
+              quality={10}
+              className="absolute inset-0 w-full h-full z-20 ml-28 mt-3 filter brightness-75"
+            />
+
+            <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold relative z-30 top-16 opacity-60">
+              Modo Digitação
+            </h1>
           </div>
         </div>
 
