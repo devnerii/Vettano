@@ -33,10 +33,10 @@ const HeaderVariants: React.FC = () => {
     setIsLoaded(true);
   }, [setIsLoaded]);
 
-  // Log de depuração para verificar o estado do menu
-  React.useEffect(() => {
-    console.log("Menu está aberto:", isMenuOpen);
-  }, [isMenuOpen]);
+  // // Log de depuração para verificar o estado do menu
+  // React.useEffect(() => {
+  //   console.log("Menu está aberto:", isMenuOpen);
+  // }, [isMenuOpen]);
 
   const renderLargeHeader = () => (
     <FallInAnimation duration={1} initialY={-50}>
