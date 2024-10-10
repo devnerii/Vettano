@@ -17,11 +17,11 @@ const Games: React.FC = () => {
 
         <div className="col-span-12 flex justify-start items-center mt-4 relative">
           <div className="w-1/2 h-64 bg-gradient-to-b from-[#1D1C49] to-[#323179] rounded-lg p-4 text-white mr-2 px-12 py-28 relative overflow-hidden">
-            <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold">
+            <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold relative z-10">
               Modo Clássico
             </h1>
             <button
-              className="px-4 sm:px-20 md:px-4 lg:px-6 xl:px-12 2xl:px-8 py-2 sm:py-3 md:py-3 lg:py-3 xl:py-3 2xl:py-5 rounded-2xl text-white relative overflow-hidden transition-shadow duration-500 shadow-none border-2 border-[#5D52EE] 
+              className="px-4 sm:px-20 md:px-4 lg:px-6 xl:px-12 2xl:px-8 py-2 sm:py-3 md:py-3 lg:py-3 xl:py-3 2xl:py-5 rounded-2xl text-white relative z-10 overflow-hidden transition-shadow duration-500 shadow-none border-2 border-[#5D52EE] 
     text-xs sm:text-sm md:text-xs lg:text-base xl:text-base 2xl:text-lg whitespace-nowrap mt-3"
               style={{
                 background: "linear-gradient(to right, #8E83FB, #5D52EE)",
@@ -41,7 +41,7 @@ const Games: React.FC = () => {
               Jogar
             </button>
 
-            <div className="absolute top-1/2 left-28 transform -translate-y-1/2 w-full h-full scale-125 overflow-hidden">
+            <div className="absolute top-1/2 left-32 transform -translate-y-1/2 w-full h-full scale-130 overflow-hidden z-0">
               <Image
                 src="/assets/img/images/pantera_com_dourado.png"
                 alt="Pantera com Dourado"
