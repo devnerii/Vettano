@@ -257,7 +257,7 @@ const Games: React.FC = () => {
               alt="Modo Livre Imagem"
               layout="fill"
               objectFit="contain"
-              quality={10}
+              quality={75}
               className="absolute inset-0 w-full h-full z-10 scale-105 ml-24 mt-6"
             />
 
