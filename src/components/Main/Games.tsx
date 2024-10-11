@@ -250,10 +250,10 @@ const Games: React.FC = () => {
           </div>
 
           <div className="w-full sm:w-1/3 h-64 rounded-lg px-12 py-28 text-white relative bg-gradient-to-b from-[#1D1C49] to-[#323179] overflow-hidden">
-            <div className="ml-24 mt-28 absolute inset-0 bg-blue-700 opacity-90 blur-3xl transform translate-x-4 md:translate-x-8 pointer-events-none"></div>
+            <div className="ml-24 mt-28 absolute inset-0 bg-purple-700 opacity-90 blur-3xl transform translate-x-4 md:translate-x-8 pointer-events-none"></div>
             {/* Imagem de fundo */}
             <Image
-              src="/assets/img/images/teste.png"
+              src="/assets/img/images/urso.png"
               alt="Modo Livre Imagem"
               layout="fill"
               objectFit="contain"
