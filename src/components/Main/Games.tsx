@@ -228,6 +228,7 @@ const Games: React.FC = () => {
 
         <div className="col-span-12 flex justify-between items-center mt-4 relative space-x-4">
           <div className="w-full sm:w-1/3 h-64 rounded-lg px-12 py-28 text-white relative bg-gradient-to-b from-[#1D1C49] to-[#323179] overflow-hidden">
+          <div className="ml-24 mt-28 absolute inset-0 bg-purple-700 opacity-90 blur-3xl transform translate-x-4 md:translate-x-8 pointer-events-none"></div>
             {/* Imagem de fundo */}
             <Image
               src="/assets/img/images/roleta.png"
@@ -235,7 +236,7 @@ const Games: React.FC = () => {
               layout="fill"
               objectFit="cover"
               quality={100}
-              className="absolute inset-0 w-full h-full z-10 ml-28 mt-7"
+              className="absolute inset-0 w-full h-full z-10 ml-32 mt-8 scale-75"
             />
             <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold relative z-20">
             Salão das Chances
@@ -252,12 +253,12 @@ const Games: React.FC = () => {
             <div className="ml-24 mt-28 absolute inset-0 bg-blue-700 opacity-90 blur-3xl transform translate-x-4 md:translate-x-8 pointer-events-none"></div>
             {/* Imagem de fundo */}
             <Image
-              src="/assets/img/images/tesouro.png"
+              src="/assets/img/images/teste.png"
               alt="Modo Livre Imagem"
               layout="fill"
               objectFit="contain"
               quality={10}
-              className="absolute inset-0 w-full h-full z-10 scale-105 ml-24 mt-16"
+              className="absolute inset-0 w-full h-full z-10 scale-105 ml-24 mt-6"
             />
 
             <h1 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl font-semibold relative z-20">
