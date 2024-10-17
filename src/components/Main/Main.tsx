@@ -1,7 +1,7 @@
 import React from "react";
-import CampaignSection from "./CampaignSection";
+import CampaignSection from "./Banner/CampaignSection";
 import useBreakpoint from "../../hooks/useBreakpoint";
-import Games from "./Games"
+import Games from "./Games/Games"
 
 interface MainProps {
   leftTargetDate: string;

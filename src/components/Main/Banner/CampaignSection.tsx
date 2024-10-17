@@ -1,9 +1,9 @@
 import React from "react";
 import Image from "next/image";
 import CountdownTimer from "./CountdownTimer";
-import FirstPlace from "./FirstPlace";
-import SecondPlace from "./SecondPlace";
-import ThirdPlace from "./ThirdPlace";
+import FirstPlace from "./Places/FirstPlace";
+import SecondPlace from "./Places/SecondPlace";
+import ThirdPlace from "./Places/ThirdPlace";
 
 interface CampaignSectionProps {
   leftTargetDate: string;

@@ -5,8 +5,8 @@ import styled, { keyframes } from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FaTrophy,
-  FaStar,
   FaMedal,
+  FaStar,
   FaCrown,
   FaNewspaper,
   FaStore,
@@ -18,6 +18,7 @@ import {
   FaTwitter,
   FaTiktok,
 } from "react-icons/fa";
+import { GiPodiumWinner, GiPodiumSecond, GiPodiumThird } from "react-icons/gi";
 import { IoIosArrowForward, IoMdClose } from "react-icons/io";
 import Image from "next/image";
 
@@ -151,13 +152,13 @@ const LeftColumnNovo: React.FC = () => {
                   </div>
 
                   {/* Card do Último Vencedor com destaque adicional */}
-                  <div className="bg-[#16153f] p-4 rounded-xl flex items-center shadow-lg shadow-yellow-500/50 hover:shadow-lg hover:shadow-yellow-500/50 transition-transform duration-300 hover:scale-105 cursor-pointer border-2 border-yellow-500">
+                  <div className="bg-[#16153f] p-4 rounded-xl flex items-center shadow-lg shadow-[#8a2be2]/50 hover:shadow-lg hover:shadow-[#8a2be2]/50 transition-transform duration-300 hover:scale-105 cursor-pointer border-2 border-[#8a2be2]">
                     <Image
                       src={lastWinner.avatar}
                       alt="Avatar"
                       width={60}
                       height={60}
-                      className="rounded-full mr-4 border-2 border-yellow-500 shadow-md shadow-yellow-500/50"
+                      className="rounded-full mr-4 border-2 border-[#8a2be2] shadow-md shadow-[#8a2be2]/50"
                     />
                     <div className="flex-1">
                       <div className="text-lg font-semibold text-white mb-1">
@@ -167,7 +168,7 @@ const LeftColumnNovo: React.FC = () => {
                         {lastWinner.score} pontos
                       </div>
                     </div>
-                    <FaTrophy className="text-yellow-500 text-2xl" />
+                    <FaTrophy className="text-[#8a2be2] text-2xl" />
                   </div>
 
                   {/* Rank do Dia Section */}
@@ -179,15 +180,7 @@ const LeftColumnNovo: React.FC = () => {
                     {dailyRanks.map((rank, index) => (
                       <div
                         key={index}
-                        className={`flex items-center mb-3 p-2 rounded-lg transition-all duration-300 cursor-pointer hover:translate-x-1 ${
-                          index === 0
-                            ? "border-2 border-yellow-400 shadow-lg shadow-yellow-400/50 hover:bg-yellow-400/30" // Hover dourado leve
-                            : index === 1
-                            ? "border-2 border-gray-300 shadow-lg shadow-gray-300/50 hover:bg-gray-300/20" // Hover cinza leve
-                            : index === 2
-                            ? "border-2 border-orange-500 shadow-lg shadow-orange-500/50 hover:bg-orange-500/20" // Hover laranja leve
-                            : "border border-gray-700 shadow-md hover:bg-gray-700/20" // Hover padrão
-                        }`}
+                        className={`flex items-center mb-3 p-2 rounded-lg transition-all duration-300 cursor-pointer hover:bg-[#4b3b95]/20 border-2 border-[#4b3b95] shadow-md hover:shadow-lg`}
                       >
                         <Image
                           src={rank.avatar}
@@ -202,19 +195,19 @@ const LeftColumnNovo: React.FC = () => {
                             {rank.score} pontos
                           </div>
                         </div>
-                        <div className="mr-2 text-lg font-semibold text-[#ffa723]">
+                        <div className="mr-2 text-3xl font-semibold text-[#4b3b95]">
                           {index === 0 && (
-                            <FaMedal className="text-yellow-400" />
+                            <GiPodiumWinner className="text-[#4b3b95]" />
                           )}{" "}
-                          {/* Medalha de Ouro */}
+                          {/* Medalha adaptada */}
                           {index === 1 && (
-                            <FaMedal className="text-gray-300" />
+                            <GiPodiumSecond className="text-[#4b3b95]" />
                           )}{" "}
-                          {/* Medalha de Prata */}
+                          {/* Medalha adaptada */}
                           {index === 2 && (
-                            <FaMedal className="text-orange-500" />
+                            <GiPodiumThird className="text-[#4b3b95]" />
                           )}{" "}
-                          {/* Medalha de Bronze */}
+                          {/* Medalha adaptada */}
                         </div>
                       </div>
                     ))}
